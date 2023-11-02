@@ -59,7 +59,7 @@ const update = async (req, res) => {
 const remove = async (req, res) => { 
 	try {
 		let product = req.profile
-		let deletedProduct = await product.remove() 
+		let deletedProduct = await product.deleteOne() 
 		res.json(deletedProduct) 
 	} catch (err) {
 		return res.status(400).json({
